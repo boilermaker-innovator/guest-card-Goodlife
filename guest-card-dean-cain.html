@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dean Cain: Playing Superman | Good Life Media</title>
+    
+    <!-- Social sharing meta tags -->
+    <meta property="og:title" content="Dean Cain: Playing Superman">
+    <meta property="og:description" content="Beyond the cape — Dean Cain opens up about adoption, losing his NFL dream, and raising his son alone.">
+    <meta property="og:type" content="video.other">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A227;
+            --gold-light: #E8D48A;
+            --cream: #FAF7F0;
+            --charcoal: #1C1C1C;
+            --warm-black: #252525;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(165deg, #1a1a1a 0%, #0d0d0d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .guest-card {
+            width: 100%;
+            max-width: 420px;
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--warm-black) 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 80px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(201, 162, 39, 0.2);
+            position: relative;
+        }
+
+        .guest-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .card-header {
+            padding: 28px 28px 20px;
+            text-align: center;
+        }
+
+        .guest-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .guest-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .episode-title {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .video-section {
+            padding: 0 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 16:9 aspect ratio for full interview */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .context-section {
+            padding: 24px 28px;
+        }
+
+        .context-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--cream);
+            text-align: center;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .context-quote::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.4;
+            position: absolute;
+            top: -15px;
+            left: -5px;
+            line-height: 1;
+        }
+
+        .context-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .highlights {
+            margin-top: 20px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .highlights-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .highlights-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .highlights-list li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlights-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .cta-section {
+            padding: 8px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .cta-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B8922A 100%);
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
+        }
+
+        .cta-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cta-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .cta-secondary svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .card-footer {
+            padding: 20px 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-logo .brand {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .footer-divider {
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .footer-tagline {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .share-prompt {
+            text-align: center;
+            padding: 16px;
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.85rem;
+            color: var(--cream);
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .guest-card {
+                border-radius: 16px;
+            }
+            
+            .guest-name {
+                font-size: 1.9rem;
+            }
+            
+            .card-header {
+                padding: 24px 20px 16px;
+            }
+            
+            .context-section {
+                padding: 20px;
+            }
+            
+            .cta-section {
+                padding: 8px 20px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="guest-card">
+        <div class="card-header">
+            <div class="guest-label">Featured Conversation</div>
+            <h1 class="guest-name">Dean Cain</h1>
+            <p class="episode-title">Playing Superman</p>
+        </div>
+
+        <div class="video-section">
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/RaTwRLrPqSU" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="context-section">
+            <p class="context-quote">
+                This is about so much more than the cape. It's about a man finding his identity beyond the roles the world gave him.
+            </p>
+            <p class="context-description">
+                Dean Cain goes deep — sharing how his adoptive father shaped his values, the moment his NFL dream ended at 22, and watching his son develop what he calls a "lion's heart."
+            </p>
+
+            <div class="highlights">
+                <div class="highlights-title">In This Conversation</div>
+                <ul class="highlights-list">
+                    <li>Being adopted at age 4 and the father who changed everything</li>
+                    <li>Growing up in Malibu with Charlie Sheen and Rob Lowe</li>
+                    <li>NFL dreams ending with a knee injury</li>
+                    <li>Raising his son as a single father</li>
+                    <li>Why he became a reserve police officer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a href="https://youtu.be/RaTwRLrPqSU" target="_blank" class="cta-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                Watch Full Interview
+            </a>
+            <a href="https://gofund.me/44f26e65" target="_blank" class="cta-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                Support Good Life Media
+            </a>
+        </div>
+
+        <div class="card-footer">
+            <span class="footer-logo">A <span class="brand">Good Life Media</span> conversation</span>
+            <span class="footer-divider"></span>
+            <span class="footer-tagline">Stories that matter</span>
+        </div>
+    </div>
+
+    <p class="share-prompt">Share this card to spread stories worth telling</p>
+</body>
+</html>

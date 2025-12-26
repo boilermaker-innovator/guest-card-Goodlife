@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Life Media | Guest Cards</title>
+    
+    <meta property="og:title" content="Good Life Media - Guest Cards">
+    <meta property="og:description" content="Stories that matter. Conversations that go deeper.">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A227;
+            --gold-light: #E8D48A;
+            --cream: #FAF7F0;
+            --charcoal: #1C1C1C;
+            --warm-black: #252525;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(165deg, #1a1a1a 0%, #0d0d0d 100%);
+            min-height: 100vh;
+            color: var(--cream);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Section title */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold-light);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 15px auto 0;
+        }
+
+        /* Guest cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card-preview {
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--warm-black) 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            border-color: rgba(201, 162, 39, 0.4);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .card-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--cream);
+            margin-bottom: 4px;
+        }
+
+        .card-episode {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .card-cta svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .card-preview:hover .card-cta svg {
+            transform: translateX(4px);
+        }
+
+        /* Support section */
+        .support-section {
+            background: rgba(201, 162, 39, 0.08);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .support-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--cream);
+            margin-bottom: 16px;
+        }
+
+        .support-section p {
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
+        }
+
+        .support-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B8922A 100%);
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+        }
+
+        .support-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
+        }
+
+        .support-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .footer-brand span {
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .support-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Good Life <span>Media</span></h1>
+            <p class="tagline">Stories that matter</p>
+            <p class="intro">
+                Good Life Media exists to tell the truth about life as it's actually being lived — not after it's resolved. 
+                These Guest Cards share the depth of our conversations with people who've lived through real things.
+            </p>
+        </header>
+
+        <h2 class="section-title">Featured Conversations</h2>
+
+        <div class="cards-grid">
+            <!-- Jay Leno -->
+            <a href="guest-card-jay-leno.html" class="card-preview">
+                <img src="social-card-jay-leno.png" alt="Jay Leno Guest Card" class="card-image">
+                <div class="card-content">
+                    <div class="card-label">Featured Conversation</div>
+                    <h3 class="card-name">Jay Leno</h3>
+                    <p class="card-episode">Remembers Rodney Dangerfield</p>
+                    <span class="card-cta">
+                        View Card
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Dean Cain -->
+            <a href="guest-card-dean-cain.html" class="card-preview">
+                <img src="social-card-dean-cain.png" alt="Dean Cain Guest Card" class="card-image">
+                <div class="card-content">
+                    <div class="card-label">Featured Conversation</div>
+                    <h3 class="card-name">Dean Cain</h3>
+                    <p class="card-episode">Playing Superman</p>
+                    <span class="card-cta">
+                        View Card
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Jerry West -->
+            <a href="guest-card-jerry-west.html" class="card-preview">
+                <img src="social-card-jerry-west.png" alt="Jerry West Guest Card" class="card-image">
+                <div class="card-content">
+                    <div class="card-label">Featured Conversation</div>
+                    <h3 class="card-name">Jerry West</h3>
+                    <p class="card-episode">A Life Beyond Basketball</p>
+                    <span class="card-cta">
+                        View Card
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div class="support-section">
+            <h2>Support Good Life Media</h2>
+            <p>
+                This work cannot continue without your help. Every donation keeps these conversations going — 
+                real stories from real people, told without filters.
+            </p>
+            <a href="https://gofund.me/44f26e65" target="_blank" class="support-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                Donate Now
+            </a>
+        </div>
+
+        <footer>
+            <p class="footer-brand">A <span>Good Life Media</span> project</p>
+            <div class="footer-links">
+                <a href="https://www.goodlifetelevision.org" target="_blank">Website</a>
+                <a href="https://gofund.me/44f26e65" target="_blank">GoFundMe</a>
+                <a href="https://www.youtube.com/@GoodLifeTelevision" target="_blank">YouTube</a>
+            </div>
+            <p class="footer-note">Guest Cards powered by iTabs</p>
+        </footer>
+    </div>
+</body>
+</html>
