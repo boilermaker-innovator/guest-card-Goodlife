@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry West: A Life Beyond Basketball | Good Life Media</title>
+    
+    <!-- Social sharing meta tags -->
+    <meta property="og:title" content="Jerry West: A Life Beyond Basketball">
+    <meta property="og:description" content="The NBA logo himself opens up about loss, depression, and finding meaning beyond the game.">
+    <meta property="og:image" content="https://boilermaker-innovator.github.io/guest-card-Goodlife/social-card-jerry-west.png">
+    <meta property="og:type" content="video.other">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://boilermaker-innovator.github.io/guest-card-Goodlife/social-card-jerry-west.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A227;
+            --gold-light: #E8D48A;
+            --cream: #FAF7F0;
+            --charcoal: #1C1C1C;
+            --warm-black: #252525;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --itabs-blue: #0066cc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(165deg, #1a1a1a 0%, #0d0d0d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .guest-card {
+            width: 100%;
+            max-width: 420px;
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--warm-black) 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 80px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(201, 162, 39, 0.2);
+            position: relative;
+        }
+
+        .guest-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .card-header {
+            padding: 28px 28px 20px;
+            text-align: center;
+        }
+
+        .guest-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .guest-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .episode-title {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .video-section {
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 16:9 aspect ratio for full interview */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* iTabs button next to video */
+        .itabs-video-btn {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            background: var(--itabs-blue);
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 102, 204, 0.4);
+            z-index: 10;
+        }
+
+        .itabs-video-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.6);
+        }
+
+        .itabs-video-btn .itabs-i {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            line-height: 1;
+        }
+
+        .context-section {
+            padding: 20px 28px;
+        }
+
+        .context-tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .cta-section {
+            padding: 8px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .cta-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B8922A 100%);
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
+        }
+
+        .cta-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .card-footer {
+            padding: 20px 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-logo .brand {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* iTabs button next to logo */
+        .itabs-logo-btn {
+            width: 24px;
+            height: 24px;
+            background: var(--itabs-blue);
+            border-radius: 50%;
+            border: 2px solid white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.4);
+            margin-left: 4px;
+        }
+
+        .itabs-logo-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.6);
+        }
+
+        .itabs-logo-btn .itabs-i {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            line-height: 1;
+        }
+
+        /* Floating iTabs button - bottom corner */
+        .itabs-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            background: var(--itabs-blue);
+            border-radius: 50%;
+            border: 3px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.5);
+            z-index: 100;
+        }
+
+        .itabs-floating-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 30px rgba(0, 102, 204, 0.7);
+        }
+
+        .itabs-floating-btn .itabs-i {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+            line-height: 1;
+        }
+
+        .itabs-floating-btn .itabs-text {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 8px;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.5px;
+            margin-top: 1px;
+        }
+
+        /* Popup overlay */
+        .itabs-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .itabs-popup-overlay.active {
+            display: flex;
+        }
+
+        .itabs-popup {
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--warm-black) 100%);
+            border-radius: 16px;
+            max-width: 400px;
+            width: 100%;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            position: relative;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--cream);
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .popup-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .popup-itabs-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--itabs-blue);
+            border-radius: 50%;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-itabs-icon .itabs-i {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .popup-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--cream);
+        }
+
+        .popup-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .popup-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B8922A 100%);
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .popup-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        .popup-highlights {
+            margin-top: 16px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .popup-highlights-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .popup-highlights-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .popup-highlights-list li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .popup-highlights-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                padding-bottom: 100px;
+            }
+            
+            .guest-card {
+                border-radius: 16px;
+            }
+            
+            .guest-name {
+                font-size: 1.9rem;
+            }
+            
+            .card-header {
+                padding: 24px 20px 16px;
+            }
+            
+            .context-section {
+                padding: 20px;
+            }
+            
+            .cta-section {
+                padding: 8px 20px 24px;
+            }
+
+            .itabs-floating-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="guest-card">
+        <div class="card-header">
+            <div class="guest-label">Featured Conversation</div>
+            <h1 class="guest-name">Jerry West</h1>
+            <p class="episode-title">A Life Beyond Basketball</p>
+        </div>
+
+        <div class="video-section">
+            <!-- iTabs button next to video -->
+            <div class="itabs-video-btn" onclick="openPopup('video')">
+                <span class="itabs-i">i</span>
+            </div>
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/PPHTj_uQzi0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="context-section">
+            <p class="context-tagline">The NBA logo himself opens up about loss, depression, and finding meaning beyond the game.</p>
+        </div>
+
+        <div class="cta-section">
+            <a href="https://youtu.be/PPHTj_uQzi0" target="_blank" class="cta-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                Watch Full Interview
+            </a>
+        </div>
+
+        <div class="card-footer">
+            <span class="footer-logo">
+                A <span class="brand">Good Life Media</span> conversation
+            </span>
+        </div>
+    </div>
+
+    <!-- Floating iTabs button -->
+    <div class="itabs-floating-btn" onclick="openPopup('support')">
+        <span class="itabs-i">i</span>
+        <span class="itabs-text">iTabs</span>
+    </div>
+
+    <!-- Video Info Popup -->
+    <div class="itabs-popup-overlay" id="popup-video">
+        <div class="itabs-popup">
+            <button class="popup-close" onclick="closePopup('video')">×</button>
+            <div class="popup-header">
+                <div class="popup-itabs-icon">
+                    <span class="itabs-i">i</span>
+                </div>
+                <h3 class="popup-title">About This Interview</h3>
+            </div>
+            <div class="popup-content">
+                <p>At 82 years old, Jerry West shares what he's rarely spoken about — the pain behind the legend.</p>
+                
+                <div class="popup-highlights">
+                    <div class="popup-highlights-title">In This Conversation</div>
+                    <ul class="popup-highlights-list">
+                        <li>Losing his brother in Korea when he was 13</li>
+                        <li>Surviving an abusive father in West Virginia</li>
+                        <li>The depression and "dark moods" he still battles</li>
+                        <li>His real relationship with Kobe Bryant</li>
+                        <li>Finding meaning through acts of kindness</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://youtu.be/PPHTj_uQzi0" target="_blank" class="popup-cta">Watch Now</a>
+        </div>
+    </div>
+
+    <!-- Support Popup -->
+    <div class="itabs-popup-overlay" id="popup-support">
+        <div class="itabs-popup">
+            <button class="popup-close" onclick="closePopup('support')">×</button>
+            <div class="popup-header">
+                <div class="popup-itabs-icon">
+                    <span class="itabs-i">i</span>
+                </div>
+                <h3 class="popup-title">Support Good Life Media</h3>
+            </div>
+            <div class="popup-content">
+                <p>Good Life Media creates thoughtful, long-form conversations about faith, truth, recovery, and the realities of life — without filters or spin.</p>
+                <p>Todd produces this work independently, without investors or sponsors. Your support keeps these conversations alive.</p>
+                <p>Every donation helps continue telling stories that matter.</p>
+            </div>
+            <a href="https://gofund.me/44f26e65e" target="_blank" class="popup-cta">Donate Now</a>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(type) {
+            document.getElementById('popup-' + type).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup(type) {
+            document.getElementById('popup-' + type).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close popup when clicking overlay
+        document.querySelectorAll('.itabs-popup-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.itabs-popup-overlay.active').forEach(overlay => {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
